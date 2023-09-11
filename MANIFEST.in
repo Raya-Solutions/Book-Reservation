@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include bairesort_app *.css
+recursive-include bairesort_app *.csv
+recursive-include bairesort_app *.html
+recursive-include bairesort_app *.ico
+recursive-include bairesort_app *.js
+recursive-include bairesort_app *.json
+recursive-include bairesort_app *.md
+recursive-include bairesort_app *.png
+recursive-include bairesort_app *.py
+recursive-include bairesort_app *.svg
+recursive-include bairesort_app *.txt
+recursive-exclude bairesort_app *.pyc
