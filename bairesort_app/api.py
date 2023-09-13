@@ -5,6 +5,7 @@ def call_my_custom_function(docname):
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     return "KIRK TEST"
 =======
 <<<<<<< HEAD
@@ -16,3 +17,6 @@ def call_my_custom_function(docname):
 =======
     return "api.py + client script test = Successful(KIRK)"
 >>>>>>> 198bceb (please work)
+=======
+    return "kirk test"
+>>>>>>> 300abe8 (changes)
