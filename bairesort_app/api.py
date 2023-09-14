@@ -51,3 +51,27 @@ def update_room_availability(check_in, check_out, room, available):
         room_availability.room = room
         room_availability.available = available
         room_availability.insert()
+
+
+@frappe.whitelist()
+def get_available_rooms(check_in, check_out, selected_rooms=None):
+    # Function to get the list of available rooms for the selected date range
+
+    # Fetch booked rooms for the selected date range
+    booked_rooms = frappe.get_all(
+        "Booking Event",
+        filters={
+            "room": ("not in", selected_rooms) if selected_rooms else None,
+            "check_in": (">=", check_in),
+            "check_out": ("<=", check_out),
+        },
+        fields=["room"],
+    )
+
+    # Fetch all room names (Room 1, Room 2, ..., Room 5)
+    all_rooms = ["Room {}".format(i) for i in range(1, 6)]
+
+    # Calculate available rooms
+    available_rooms = list(set(all_rooms) - set(room["room"] for room in booked_rooms))
+
+    return available_rooms
