@@ -1,14 +1,4 @@
 from . import __version__ as app_version
-# Import your API function
-from .api import get_occupied_rooms
-
-# Define the API route in the get_api_methods function
-def get_api_methods():
-    return {
-        "bairesort_app.api.get_occupied_rooms": {
-            "GET": "bairesort_app.api.get_occupied_rooms",
-        }
-    }
 
 app_name = "bairesort_app"
 app_title = "Bairesort App"
