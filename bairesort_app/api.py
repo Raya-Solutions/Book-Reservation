@@ -47,3 +47,20 @@ def update_room_availability(check_in, check_out, room, available):
         room_availability.room = room
         room_availability.available = available
         room_availability.insert()
+
+@frappe.whitelist()
+def create_room_availability(check_in, check_out, room):
+    # Check if the room is available for the selected date range
+    available = is_room_available(check_in, check_out, room)
+
+    # Create a Room Availability record
+    room_availability = frappe.new_doc("Room Availability")
+    room_availability.date = check_in
+    room_availability.room = room
+    room_availability.available = available
+    room_availability.insert()
+
+    return {
+        "message": "Room availability created successfully",
+        "available": available,
+    }
