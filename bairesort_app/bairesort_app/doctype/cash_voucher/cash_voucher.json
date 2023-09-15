@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CV.YYYY.-.####",
+ "creation": "2023-08-30 00:34:11.163902",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "paid_to",
+  "column_break_j02bm",
+  "naming_series",
+  "section_break_ob8bc",
+  "address",
+  "column_break_jvhfe",
+  "date",
+  "section_break_msxiv",
+  "cv_data",
+  "section_break_o3s5d",
+  "hidden",
+  "column_break_fqafx",
+  "total",
+  "section_break_vb4sx",
+  "pby",
+  "chkby",
+  "appby",
+  "column_break_bwkpe",
+  "rfrom",
+  "prby",
+  "afrom"
+ ],
+ "fields": [
+  {
+   "fieldname": "paid_to",
+   "fieldtype": "Data",
+   "label": "Paid To"
+  },
+  {
+   "fieldname": "column_break_j02bm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "NO",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ob8bc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_jvhfe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_msxiv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cv_data",
+   "fieldtype": "Table",
+   "label": "Particulars",
+   "options": "Cash Voucher Lines"
+  },
+  {
+   "fieldname": "section_break_o3s5d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hidden",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fqafx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total"
+  },
+  {
+   "fieldname": "section_break_vb4sx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pby",
+   "fieldtype": "Data",
+   "label": "Prepared By"
+  },
+  {
+   "fieldname": "chkby",
+   "fieldtype": "Data",
+   "label": "Checked By"
+  },
+  {
+   "fieldname": "appby",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "column_break_bwkpe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rfrom",
+   "fieldtype": "Signature",
+   "label": "Received From"
+  },
+  {
+   "fieldname": "prby",
+   "fieldtype": "Signature",
+   "label": "Payment Received by"
+  },
+  {
+   "fieldname": "afrom",
+   "fieldtype": "Signature",
+   "label": "Approved From"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-15 17:26:44.234217",
+ "modified_by": "Administrator",
+ "module": "Bairesort App",
+ "name": "Cash Voucher",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

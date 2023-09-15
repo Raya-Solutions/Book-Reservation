@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-11 20:46:49.289989",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "add_reservation",
+  "section_break_1",
+  "check_in",
+  "nights",
+  "reservation_type",
+  "column_break_1",
+  "check_out",
+  "rooms",
+  "section_break_2",
+  "booking_source",
+  "column_break_2",
+  "business_source",
+  "section_break_3",
+  "rate_offered",
+  "section_break_4",
+  "contract",
+  "column_break_3",
+  "book_all_available_rooms",
+  "column_break_4",
+  "quick_group_book",
+  "column_break_5",
+  "complimentary_room",
+  "section_break_5",
+  "room_type",
+  "rate_type",
+  "room",
+  "column_break_6",
+  "adult",
+  "child",
+  "rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "add_reservation",
+   "fieldtype": "Heading",
+   "label": "Add Reservation"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Datetime",
+   "label": "Check In"
+  },
+  {
+   "fieldname": "nights",
+   "fieldtype": "Duration",
+   "label": "Nights"
+  },
+  {
+   "fieldname": "reservation_type",
+   "fieldtype": "Select",
+   "label": "Reservation Type",
+   "options": "Confirm Booking"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Datetime",
+   "label": "Check Out"
+  },
+  {
+   "fieldname": "rooms",
+   "fieldtype": "Int",
+   "label": "Room(s)"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "booking_source",
+   "fieldtype": "Select",
+   "label": "Booking Source",
+   "options": "Direct"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "business_source",
+   "fieldtype": "Select",
+   "label": "Business Source",
+   "options": "-Select-"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate_offered",
+   "fieldtype": "Heading",
+   "label": "Rate Offered"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "contract",
+   "fieldtype": "Check",
+   "label": "Contract"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "book_all_available_rooms",
+   "fieldtype": "Check",
+   "label": "Book All Available Rooms"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "quick_group_book",
+   "fieldtype": "Check",
+   "label": "Quick Group Book"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "complimentary_room",
+   "fieldtype": "Check",
+   "label": "Complimentary Room"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Select",
+   "label": "Room Type",
+   "options": "-Select-"
+  },
+  {
+   "fieldname": "rate_type",
+   "fieldtype": "Select",
+   "label": "Rate Type",
+   "options": "-Select-"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Select",
+   "label": "Room",
+   "options": "-Select-"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adult",
+   "fieldtype": "Int",
+   "label": "Adult"
+  },
+  {
+   "fieldname": "child",
+   "fieldtype": "Int",
+   "label": "Child"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate (P) (Tax Inc.)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-15 17:26:42.963083",
+ "modified_by": "Administrator",
+ "module": "Bairesort App",
+ "name": "Reservation",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
