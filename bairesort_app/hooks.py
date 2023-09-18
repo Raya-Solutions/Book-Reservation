@@ -7,6 +7,11 @@ app_description = "Beni Repo"
 app_email = "ranz.manalo@rayasolutionsph.com"
 app_license = "MIT"
 
+# Include your custom script in build
+app_include_js = [
+    "/assets/bairesort_app/js/booking_event_listview_settings.js",
+]
+
 # Includes in <head>
 # ------------------
 
