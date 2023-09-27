@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:Reservation-{guest_name}-{DD}-{####} ",
  "creation": "2023-09-11 20:46:49.289989",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,12 +10,18 @@
  "field_order": [
   "add_reservation",
   "section_break_1",
-  "check_in",
-  "nights",
-  "reservation_type",
+  "subject",
+  "section_break_nqv7r",
+  "guest_name",
+  "arrival",
   "column_break_1",
-  "check_out",
+  "reservation_type",
+  "check_in",
+  "column_break_qq7p2",
   "rooms",
+  "check_out",
+  "column_break_tvhtg",
+  "nights",
   "section_break_2",
   "booking_source",
   "column_break_2",
@@ -36,7 +43,9 @@
   "column_break_6",
   "adult",
   "child",
-  "rate"
+  "rate",
+  "status_value",
+  "color"
  ],
  "fields": [
   {
@@ -51,11 +60,14 @@
   {
    "fieldname": "check_in",
    "fieldtype": "Datetime",
-   "label": "Check In"
+   "in_list_view": 1,
+   "label": "Check In",
+   "reqd": 1
   },
   {
    "fieldname": "nights",
    "fieldtype": "Duration",
+   "hide_seconds": 1,
    "label": "Nights"
   },
   {
@@ -71,7 +83,8 @@
   {
    "fieldname": "check_out",
    "fieldtype": "Datetime",
-   "label": "Check Out"
+   "label": "Check Out",
+   "reqd": 1
   },
   {
    "fieldname": "rooms",
@@ -187,15 +200,62 @@
    "fieldname": "rate",
    "fieldtype": "Float",
    "label": "Rate (P) (Tax Inc.)"
+  },
+  {
+   "fieldname": "guest_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Guest Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "arrival",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Arrival"
+  },
+  {
+   "fieldname": "column_break_qq7p2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tvhtg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "hidden": 1,
+   "label": "Color"
+  },
+  {
+   "default": "Pending Reservation",
+   "fieldname": "status_value",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending Reservation\nConfirmed Reservation\nCanceled Reservation"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_nqv7r",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-09-15 17:26:42.963083",
+ "modified": "2023-09-27 18:26:53.837832",
  "modified_by": "Administrator",
  "module": "Bairesort App",
  "name": "Reservation",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
