@@ -1,9 +1,11 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "Guest-.####",
  "creation": "2023-09-11 20:48:03.747073",
  "default_view": "List",
  "doctype": "DocType",
+ "document_type": "Setup",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
@@ -24,6 +26,7 @@
   "city",
   "column_break_4",
   "zip_code",
+  "full_address",
   "column_break_5",
   "section_break_4",
   "other_info",
@@ -35,6 +38,7 @@
  ],
  "fields": [
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "guest",
    "fieldtype": "Heading",
    "label": "Guest Name "
@@ -46,26 +50,39 @@
   {
    "fieldname": "gender",
    "fieldtype": "Select",
+   "in_standard_filter": 1,
    "label": "Gender",
    "options": "Mr.\nMrs."
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "mobile_number",
    "fieldtype": "Data",
-   "label": "Mobile"
+   "in_list_view": 1,
+   "label": "Mobile",
+   "length": 11
   },
   {
    "fieldname": "column_break_1",
    "fieldtype": "Column Break"
   },
   {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
    "fieldname": "full_name",
    "fieldtype": "Data",
-   "label": "Full Name"
+   "in_global_search": 1,
+   "in_preview": 1,
+   "label": "Full Name",
+   "no_copy": 1,
+   "reqd": 1,
+   "search_index": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "email",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Email"
   },
   {
@@ -78,10 +95,12 @@
    "label": "Address"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "section_break_3",
    "fieldtype": "Section Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "country",
    "fieldtype": "Data",
    "label": "Country"
@@ -100,6 +119,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "city",
    "fieldtype": "Data",
    "label": "City"
@@ -109,6 +129,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "zip_code",
    "fieldtype": "Data",
    "label": "Zip"
@@ -152,15 +173,30 @@
    "fieldname": "additional_information",
    "fieldtype": "HTML",
    "label": "Additional Information"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "full_address",
+   "fieldtype": "Data",
+   "label": "Full Address",
+   "read_only": 1
   }
  ],
+ "icon": "fa fa-user",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-09-15 17:26:43.675393",
+ "links": [
+  {
+   "link_doctype": "Reservation",
+   "link_fieldname": "guest_name",
+   "table_fieldname": "fullname"
+  }
+ ],
+ "modified": "2023-09-29 01:11:17.438596",
  "modified_by": "Administrator",
  "module": "Bairesort App",
  "name": "Guest",
- "naming_rule": "By \"Naming Series\" field",
+ "name_case": "Title Case",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -176,8 +212,12 @@
    "write": 1
   }
  ],
+ "search_fields": "email",
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1
+ "title_field": "full_name",
+ "track_changes": 1,
+ "translated_doctype": 1
 }
