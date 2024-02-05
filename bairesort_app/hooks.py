@@ -106,7 +106,11 @@ app_include_js = [
 # Document Events
 # ---------------
 # Hook on document methods and events
-
+doc_events = {
+	"Sales Invoice":{
+		"validate":"bairesort_app.script.sales_invoice.validate"
+	}
+}
 # doc_events = {
 #	"*": {
 #		"on_update": "method",

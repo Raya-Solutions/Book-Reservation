@@ -41,10 +41,10 @@ def get_reservation_list():
     return doc_arr
 
 @frappe.whitelist()
-
 def get_item_list():
     try:
-        list = frappe.get_list('Item')
+        list = frappe.get_list('Item',filters={'custom_for_reservation': 1,"item_group":"Hotel"}, fields=["*"])
+        return list
     except Exception as e:
         list = None
         frappe.throw(_("DocType not Fount"))
@@ -74,7 +74,7 @@ def room_status(room_list):
     try:
         for room in room_array:
             item_doc = frappe.get_doc("Item",room)
-            item_doc.room_status = "Dirty"
+            item_doc.custom_room_status = "Dirty"
 
             item_doc.save()
             frappe.db.commit()
@@ -93,3 +93,39 @@ def get_open_shift():
          return lists
     except Exception as e:
         frappe.throw(_("DocType not Fount"))
+
+@frappe.whitelist()
+def get_used_payment(name):
+    try:
+        list = frappe.get_list("Reservation",filters={"guest_name": name }, fields=["down_payment"])
+        
+        return list
+    except Exception as e:
+        frappe.throw(_("DocType not Found"))
+        
+@frappe.whitelist()
+def get_used_invoice(name):
+    try:
+        list = frappe.get_list("Reservation",filters={"guest_name": name }, fields=["statement"])
+        
+        return list
+    except Exception as e:
+        frappe.throw(_("DocType not Found"))
+
+@frappe.whitelist()
+def add_blocked_dates(label, start,end):
+    try:
+        new_block_date = frappe.get_doc({   
+            'doctype': 'Reservation',
+            'guest_name': "BLOCK DATE",
+            'check_in':start,
+            'check_out': end,
+            'subject': label,
+            'status_value': "Blocked Dates"
+        })
+        new_block_date.insert()
+        frappe.db.commit()
+
+        return new_block_date
+    except Exception as e:
+        frappe.throw(_("DocType not Found"))

@@ -51,7 +51,7 @@
   },
   {
    "fieldname": "check_in",
-   "fieldtype": "Datetime",
+   "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Check In",
    "reqd": 1
@@ -64,7 +64,7 @@
   },
   {
    "fieldname": "check_out",
-   "fieldtype": "Datetime",
+   "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Check Out",
    "read_only": 1,
@@ -124,8 +124,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Subject",
-   "print_hide": 1,
-   "read_only": 1
+   "print_hide": 1
   },
   {
    "fieldname": "section_break_nqv7r",
@@ -222,7 +221,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-11-14 09:24:12.273006",
+ "modified": "2024-01-11 11:26:46.747771",
  "modified_by": "Administrator",
  "module": "Bairesort App",
  "name": "Reservation",
